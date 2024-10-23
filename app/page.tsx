@@ -54,7 +54,7 @@ export default function RandomMovie() {
     try {
       // Fetch a random popular movie
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${
+        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&include_adult=false&page=${
           Math.floor(Math.random() * 500) + 1
         }`
       );
@@ -104,12 +104,12 @@ export default function RandomMovie() {
     day: "numeric",
   });
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-900">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-900 p-5">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-secondary pb-5 text-center">
         Just Pick Something
       </h1>
       <div
-        className={`flip-card w-full max-w-md aspect-[2/3] cursor-pointer p-5 ${
+        className={`flip-card w-full max-w-md aspect-[2/3] cursor-pointer${
           isFlipped ? "flipped" : ""
         } mb-8`}
         onClick={handleFlip}
