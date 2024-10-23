@@ -54,7 +54,7 @@ export default function RandomMovie() {
     try {
       // Fetch a random popular movie
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&include_adult=false&page=${
+        `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&certification_country=US&certification.lte=R&include_adult=false&page=${
           Math.floor(Math.random() * 500) + 1
         }`
       );
