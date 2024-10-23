@@ -1,0 +1,20 @@
+.ratingContainer {
+  display: flex;
+  align-items: center; /* Vertically center stars and number */
+}
+
+.filledStar {
+  color: #fbbf24; /* Filled stars will be gold */
+  margin-right: 4px; /* Small spacing between stars */
+}
+
+.emptyStar {
+  color: #71717a; /* Empty stars will be gray */
+  margin-right: 4px; /* Same spacing */
+}
+
+.ratingNumber {
+  margin-left: 8px; /* Space between stars and the number */
+  font-size: 16px;
+  font-weight: bold;
+}
