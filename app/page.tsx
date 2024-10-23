@@ -105,16 +105,16 @@ export default function RandomMovie() {
   });
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-900">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-secondary pb-5">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-secondary pb-5 text-center">
         Just Pick Something
       </h1>
       <div
-        className={`flip-card w-full max-w-md aspect-[2/3] cursor-pointer ${
+        className={`flip-card w-full max-w-md aspect-[2/3] cursor-pointer p-5 ${
           isFlipped ? "flipped" : ""
         } mb-8`}
         onClick={handleFlip}
       >
-        <div className="flip-card-inner w-full h-full">
+        <div className="flip-card-inner w-full h-full ">
           <div className="flip-card-front w-full h-full shadow-lg rounded-lg overflow-hidden">
             {loading ? (
               <Skeleton className="w-full h-full" />
@@ -189,7 +189,7 @@ export default function RandomMovie() {
           </div>
         </div>
       </div>
-      <Button onClick={fetchRandomMovie} className="mb-8" variant="secondary">
+      <Button onClick={fetchRandomMovie} className="my-8" variant="secondary">
         Get Another Random Movie
       </Button>
       <style jsx>{`
