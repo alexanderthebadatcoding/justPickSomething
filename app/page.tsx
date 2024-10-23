@@ -109,7 +109,7 @@ export default function RandomMovie() {
         Just Pick Something
       </h1>
       <div
-        className={`flip-card w-full max-w-md aspect-[2/3] cursor-pointer${
+        className={`flip-card w-full max-w-md aspect-[2/3] cursor-pointer ${
           isFlipped ? "flipped" : ""
         } mb-8`}
         onClick={handleFlip}
